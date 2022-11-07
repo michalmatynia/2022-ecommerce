@@ -14,7 +14,18 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.2"
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "eslint-config-next": "13.0.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin": "^1.0.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
   }
 }
