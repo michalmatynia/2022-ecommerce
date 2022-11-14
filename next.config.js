@@ -1,15 +1,4 @@
-// const { withFrameworkConfig } = require("./framework/common/config");
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   swcMinify: true,
-// };
-
-// module.exports = withFrameworkConfig({
-//   nextConfig,
-//   i18n: { locales: ["en-US", "es"], defaultLocale: "en-US" },
-// });
+/*eslint no-undef: "off"*/
 
 const { withFrameworkConfig } = require("./framework/common/config");
 
