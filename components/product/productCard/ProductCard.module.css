@@ -1,0 +1,14 @@
+.root {
+  @apply relative;
+}
+
+.productTag {
+  @apply absolute top-0 left-0;
+}
+
+.productTitle {
+  background-color: red;
+}
+
+.productPrice {
+}
