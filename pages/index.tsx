@@ -3,7 +3,7 @@ import getAllProducts from "@framework/product/get-all-products";
 import { getConfig } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/product";
-import { Grid } from "@components/ui";
+import { Grid, Hero } from "@components/ui";
 
 export async function getStaticProps() {
   const config = getConfig();
@@ -26,6 +26,7 @@ export default function Home({
           <ProductCard key={product.id} product={product} />
         ))}
       </Grid>
+      <Hero headline="Cookies Icecream Muffins" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrx" />
     </>
   );
 }

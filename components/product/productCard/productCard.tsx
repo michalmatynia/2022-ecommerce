@@ -12,16 +12,20 @@ const placeholderImage = "/product-image-placeholder.svg";
 
 const ProductCard: FC<Props> = ({ product }) => {
   return (
-    <Link href={`/products/${product.slug}`}>
-      <div className={styles.root}>
+    <Link href={`/products/${product.slug}`} legacyBehavior>
+      <a className={styles.root}>
+        <div className={styles.productBg}></div>
         <div className={styles.productTag}>
           <h3 className={styles.productTitle}>
             <span>{product.name}</span>
           </h3>
-          <span className={styles.productPrice}>14 USD</span>
+          <span className={styles.productPrice}>
+            {product.price.value} {product.price.currencyCode}
+          </span>
         </div>
         {product.images && (
           <Image
+            className={styles.productImage}
             alt={product.name ?? "Product image"}
             src={product.images[0].url ?? placeholderImage}
             height={540}
@@ -30,7 +34,7 @@ const ProductCard: FC<Props> = ({ product }) => {
             layout="responsive"
           />
         )}
-      </div>
+      </a>
     </Link>
   );
 };
