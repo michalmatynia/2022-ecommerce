@@ -6,33 +6,55 @@ import styles from "./ProductCard.module.css";
 
 interface Props {
   product: Product;
+  variant?: "simple" | "slim";
 }
 
 const placeholderImage = "/product-image-placeholder.svg";
 
-const ProductCard: FC<Props> = ({ product }) => {
+const ProductCard: FC<Props> = ({ product, variant = "simple" }) => {
   return (
     <Link href={`/products/${product.slug}`} legacyBehavior>
       <a className={styles.root}>
-        <div className={styles.productBg}></div>
-        <div className={styles.productTag}>
-          <h3 className={styles.productTitle}>
-            <span>{product.name}</span>
-          </h3>
-          <span className={styles.productPrice}>
-            {product.price.value} {product.price.currencyCode}
-          </span>
-        </div>
-        {product.images && (
-          <Image
-            className={styles.productImage}
-            alt={product.name ?? "Product image"}
-            src={product.images[0].url ?? placeholderImage}
-            height={540}
-            width={540}
-            quality="85"
-            layout="responsive"
-          />
+        {variant === "slim" ? (
+          <>
+            <div className="inset-0 flex items-center justify-center absolute z-20">
+              <span className="bg-black text-white font-bold text-xl">{product.name}</span>
+            </div>
+            {product.images && (
+              <Image
+                className={styles.productImage}
+                alt={product.name ?? "Product image"}
+                src={product.images[0].url ?? placeholderImage}
+                height={320}
+                width={320}
+                quality="85"
+                layout="fixed"
+              />
+            )}
+          </>
+        ) : (
+          <>
+            <div className={styles.productBg}></div>
+            <div className={styles.productTag}>
+              <h3 className={styles.productTitle}>
+                <span>{product.name}</span>
+              </h3>
+              <span className={styles.productPrice}>
+                {product.price.value} {product.price.currencyCode}
+              </span>
+            </div>
+            {product.images && (
+              <Image
+                className={styles.productImage}
+                alt={product.name ?? "Product image"}
+                src={product.images[0].url ?? placeholderImage}
+                height={540}
+                width={540}
+                quality="85"
+                layout="responsive"
+              />
+            )}
+          </>
         )}
       </a>
     </Link>
