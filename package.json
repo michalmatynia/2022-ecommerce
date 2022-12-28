@@ -10,11 +10,13 @@
     "build:css": "postcss assets/main.css -o assets/main_browser.css"
   },
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
