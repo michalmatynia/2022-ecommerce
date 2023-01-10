@@ -1,4 +1,10 @@
-import React, { FC, Children, isValidElement, cloneElement } from "react";
+import React, {
+  FC,
+  Children,
+  isValidElement,
+  useState,
+  cloneElement,
+} from "react";
 import s from "./ProductSlider.module.css";
 import { useKeenSlider } from "keen-slider/react";
 import cn from "classnames";

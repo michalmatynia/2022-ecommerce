@@ -7,7 +7,7 @@ import { Product } from "@common/types/product";
 import { ProductSlider, Swatch } from "@components/product";
 import { Choices, getVariant } from "../helpers";
 import { useUI } from "@components/ui/context";
-import useAddItem from "@framework/cart/use-add-item";
+// import useAddItem from "@framework/cart/use-add-item";
 
 interface Props {
   product: Product;
@@ -18,7 +18,7 @@ const ProductView: FC<Props> = ({ product }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const { openSidebar } = useUI();
-  const addItem = useAddItem();
+  // const addItem = useAddItem();
 
   const variant = getVariant(product, choices);
 
@@ -31,7 +31,7 @@ const ProductView: FC<Props> = ({ product }) => {
       };
 
       setIsLoading(true);
-      await addItem(item);
+      // await addItem(item);
       setIsLoading(false);
       openSidebar();
     } catch {
@@ -102,8 +102,8 @@ const ProductView: FC<Props> = ({ product }) => {
           <div>
             <Button
               className={s.button}
-              onClick={addToCart}
-              isLoading={isLoading}
+              // onClick={addToCart}
+              // isLoading={isLoading}
             >
               Add to Cart
             </Button>
