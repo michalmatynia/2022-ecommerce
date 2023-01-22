@@ -108,7 +108,7 @@ const ProductView: FC<Props> = ({ product }) => {
             <Button
               className={s.button}
               onClick={addToCart}
-              isLoading={isLoading}
+              isloading={isLoading.toString()}
             >
               Add to Cart
             </Button>

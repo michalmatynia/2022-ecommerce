@@ -6,7 +6,6 @@ import useSWR from "swr";
 
 export const useHook = <H>(fn: (apiHooks: ApiHooks) => H) => {
   const { hooks } = useApiProvider();
-  console.log(hooks);
 
   return fn(hooks);
 };

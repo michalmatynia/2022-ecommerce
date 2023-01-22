@@ -3,6 +3,7 @@ import { Bag, Cross } from "@components/icons";
 import cn from "classnames";
 import Link from "next/link";
 import { useUI } from "@components/ui/context";
+import { Button } from "@components/ui";
 
 const CartSidebar: FC = () => {
   const isEmpty = true;
@@ -41,7 +42,7 @@ const CartSidebar: FC = () => {
         </div>
       ) : (
         <>
-          {/* <div className="px-4 sm:px-6 flex-1">
+          <div className="px-4 sm:px-6 flex-1">
             <h2 className="pt-1 pb-4 text-2xl leading-7 font-bold text-base tracking-wide inline-block">
               My Cart
             </h2>
@@ -83,7 +84,7 @@ const CartSidebar: FC = () => {
             <Button Component="a" href="/api/checkout">
               Proceed to Checkout
             </Button>
-          </div> */}
+          </div>
         </>
       )}
     </div>
