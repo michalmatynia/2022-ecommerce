@@ -13,8 +13,7 @@ class Config {
 }
 
 const configWrapper = new Config({
-  apiUrl: "http://localhost:4000/graphql",
-  fetch: fetchApi
+  fetch: fetchApi,
 });
 
 export function getConfig() {

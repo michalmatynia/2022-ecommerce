@@ -10,7 +10,7 @@ type FetchType = {
 
 type ReturnType = {
   product: Product | null;
-}
+};
 
 const getProduct = async (options: {
   config: ApiConfig;
@@ -19,7 +19,6 @@ const getProduct = async (options: {
   const { config, variables } = options;
   const { data } = await config.fetch<FetchType>({
     query: getProductQuery,
-    url: config.apiUrl,
     variables,
   });
 

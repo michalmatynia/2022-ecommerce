@@ -1,7 +1,6 @@
 import { ApiHooks } from "./hooks";
 
 export type ApiFetcherOptions = {
-  url;
   query: string;
   variables?: Variables;
 };
